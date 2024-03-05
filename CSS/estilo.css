@@ -1,0 +1,642 @@
+@charset "UTF-8";
+/* Variables */
+.header {
+  grid-area: header;
+  width: 100%;
+  padding: 5px;
+  margin: 0px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.header .textoHeader {
+  margin: 0px 20px;
+}
+.header .textoHeader h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.2rem;
+}
+
+.fondoheader{
+  /* background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); */
+  position: relative;
+}
+
+.logosredes{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+/* Variables */
+/* NAVBAR */
+.navbar {
+  grid-area: navbar;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  padding: 0px;
+  z-index: 1000;
+}
+.navbar button {
+  background-color: #f4f10a;
+  margin: 10px;
+}
+.navbar img {
+  margin: 0 10px;
+}
+.navbar div {
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.navbar div a {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+.navbar div a:hover {
+  color: #000000;
+  background-color: #f4f10a;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/* FOOTER */
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* Variables */
+/* PAGE NOSOTROS */
+.containerNosotros {
+  background-color: #f4f10a;
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 3px;
+  grid-template-areas: "header" "navbar" "main" "section" "footer";
+}
+.containerNosotros main {
+  grid-area: main;
+  background-color: #f4f10a;
+  padding: 5px auto;
+  margin: 5px auto 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerNosotros main h3 {
+  font-family: "Protest Riot", sans-serif;
+}
+.containerNosotros main p {
+  text-align: center;
+}
+.containerNosotros section {
+  grid-area: section;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+}
+.containerNosotros section h3 {
+  font-family: "Protest Riot", sans-serif;
+}
+.containerNosotros section img {
+  width: 700px;
+  margin: 5px;
+  border: solid rgb(255, 255, 255) 2px;
+  border-radius: 10%;
+}
+
+/* PAGE PRODUCTOS */
+.containerProductos {
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.1fr 1.5fr 1.5fr 1.5fr 0.5fr;
+  gap: 5px;
+  grid-template-areas: "header header" "navbar navbar" "section1 aside1" "section2 aside2" "main main" "footer footer";
+}
+.containerProductos h3 {
+  font-family: "Protest Riot", sans-serif;
+}
+.containerProductos ul {
+  margin: 15px;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1.3rem;
+  text-align: auto;
+  text-align: right;
+}
+.containerProductos .section1 {
+  grid-area: section1;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerProductos .section1 .pizzas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.containerProductos .section1 .pizzas img {
+  width: 50vh;
+  border: solid white 2px;
+  max-width: 100%;
+}
+.containerProductos .section1 .pizzas img:hover {
+  filter: brightness(0.5);
+}
+.containerProductos .section2 {
+  grid-area: section2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerProductos .section2 .masOpciones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.containerProductos .section2 .masOpciones img {
+  width: 50vh;
+  border: solid white 2px;
+  max-width: 100%;
+}
+.containerProductos .section2 .masOpciones img:hover {
+  filter: brightness(0.5);
+}
+.containerProductos .aside1 {
+  grid-area: aside1;
+  color: #000000;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerProductos .aside1 .empanadas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.containerProductos .aside1 .empanadas img {
+  width: 50vh;
+  border: solid white 2px;
+  max-width: 100%;
+}
+.containerProductos .aside1 .empanadas img:hover {
+  filter: brightness(0.5);
+}
+.containerProductos .aside2 {
+  grid-area: aside2;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.containerProductos .aside2 .ensaladas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: right;
+}
+.containerProductos .aside2 .ensaladas div {
+  text-align: right;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+.containerProductos .aside2 .ensaladas img {
+  width: 50vh;
+  border: solid white 2px;
+  max-width: 100%;
+}
+.containerProductos .aside2 .ensaladas img:hover {
+  filter: brightness(0.5);
+}
+.containerProductos main {
+  grid-area: main;
+  padding: 10px;
+  border: #7d7c7c dotted 4px;
+  border-radius: 10%;
+  background-color: #f4f10a;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* PAGE DESTACADOS */
+.destacados {
+  background-color: #f4f10a;
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  gap: 3px;
+  grid-template-areas: "header" "navbar" "main" "section1" "section2" "section3" "section4" "footer";
+}
+.destacados main {
+  grid-area: main;
+  background-color: #f4f10a;
+}
+.destacados main h3 {
+  font-size: 3rem;
+  font-family: "Protest Riot", sans-serif;
+}
+.destacados .section1 {
+  grid-area: section1;
+  background-color: #000000;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.destacados .section1 div h4 {
+  color: #f4f10a;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 3rem;
+}
+.destacados .section1 div p {
+  color: white;
+  font-size: 1rem;
+}
+.destacados .section2 {
+  grid-area: section2;
+  background-color: #f4f10a;
+  padding: 30px;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.destacados .section2 div h4 {
+  color: #000000;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 3rem;
+}
+.destacados .section2 div p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+.destacados .section3 {
+  grid-area: section3;
+  background-color: #000000;
+  padding: 30px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: right;
+}
+.destacados .section3 div h4 {
+  color: #f4f10a;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 3rem;
+}
+.destacados .section3 div p {
+  color: white;
+  font-size: 1rem;
+}
+.destacados .section4 {
+  grid-area: section4;
+  background-color: #f4f10a;
+  padding: 30px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.destacados .section4 div h4 {
+  color: #000000;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 3rem;
+}
+.destacados .section4 div p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+/*PAGE CONTACTO */
+.contacto {
+  background-color: #f4f10a;
+  padding: 5px;
+  min-height: 60vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 3px;
+  grid-template-areas: "header" "navbar" "main" "footer";
+}
+
+.contactate{
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.contacto main {
+  background-color: #f4f10a;
+}
+.contacto main h4 {
+  font-family: "Protest Riot", sans-serif;
+}
+.contacto main form {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  border: solid 2px;
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+}
+.contacto main form label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* .contacto main form .sugerencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.maps{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.iframe{
+  border: #000000 solid 2px;
+  padding: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f10a;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* INDEX */
+.containerIndex {
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.1fr 1.5fr 1.5fr 0.5fr;
+  gap: 5px;
+  grid-template-areas: "header" "navbar" "main" "section" "footer";
+}
+.containerIndex h3 {
+  font-family: "Protest Riot", sans-serif;
+}
+
+/* MAIN Productos */
+main {
+  width: 100%;
+  padding: 10px;
+  grid-area: main;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .productosInd {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  border: solid rgb(0, 0, 0) 10px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+main .productosInd h3 {
+  color: #f4f10a;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  padding: 4px;
+  display: inline-block;
+}
+main .productosInd h4 {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  background-color: #f4f10a;
+  padding: 5px;
+  display: inline-block;
+}
+main .productosInd div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+main .productosInd div a div {
+  margin: 5px;
+  width: 23rem;
+  height: 23rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-color: #f4f10a;
+}
+main .productosInd div a div:hover {
+  border-color: #ffffff;
+}
+main .productosInd div a .productosInicio1 {
+  background-image: url(../Fotos/Empanadas.jpg);
+}
+main .productosInd div a .productosInicio2 {
+  background-image: url(../Fotos/Pizzas.jpg);
+}
+main .productosInd div a .productosInicio3 {
+  background-image: url(../Fotos/ensaladas.jpg);
+}
+
+/* SECTION  Con el sello de EME */
+.section {
+  grid-area: section;
+  background-image: url(../Fotos/Bondiolafondo.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.section div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.section div h3 {
+  color: rgb(0, 0, 0);
+  background-color: #f4f10a;
+  font-size: 30px;
+  font-family: "Protest Riot", sans-serif;
+  padding: 5px 10px;
+  margin: 15px;
+}
+.section div a {
+  color: #f4f10a;
+  font-size: 20px;
+}
+.section div a p {
+  padding: 8px;
+}
+.section div a p:hover {
+  color: #f4f10a;
+  background-color: black;
+  border-radius: 10%;
+  display: inline-block;
+  padding: 8px;
+}
+
+/* MEDIA QUERIS */
+@media screen and (max-width: 780px) {
+  .containerIndex {
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.1fr 2fr 1fr 0.2fr;
+    gap: 0.5rem;
+  }
+  p, h1, h2, h3, li {
+    text-align: center;
+  }
+  .containerProductos {
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr;
+    grid-template-areas: "header" "navbar" "section1" "aside1" "aside2" "section2" "main" "footer";
+  }
+  .containerProductos .section1 .pizzas {
+    flex-direction: column;
+    text-align: center;
+  }
+  .containerProductos .section2 .masOpciones {
+    flex-direction: column;
+  }
+  .containerProductos .aside1 .empanadas {
+    flex-direction: column;
+  }
+  .containerProductos .aside2 .ensaladas {
+    flex-direction: column;
+  }
+  .containerProductos main iframe {
+    max-width: 400px;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .containerNosotros main {
+    border: solid black 2px;
+  }
+  .containerNosotros section img {
+    width: 400px;
+  }
+  .contacto {
+    grid-template-rows: 0.2fr 0.1fr 1fr 0.2fr;
+  }
+  .destacados main h3, .destacados main h5 {
+    text-align: center;
+  }
+  .destacados section h4 {
+    text-align: center;
+  }
+  .destacados .section2, .destacados .section4 {
+    flex-direction: column-reverse;
+  }
+  .contacto{
+    grid-template-rows: auto auto auto auto;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f10a;
+}
+
+a{
+    text-decoration: none;
+}
+
+.containerindex{
+     padding: 5px;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: grid;
+     grid-auto-columns: 1fr; 
+     grid-auto-rows: 1fr; 
+     grid-template-columns: 1fr; 
+     grid-template-rows: 0.5fr 0.1fr 1.5fr 1.5fr 0.5fr; 
+     gap: 5px; 
+     grid-template-areas: 
+          "header"
+          "navbar"
+          "main"
+          "section"
+          "footer";
+}
+
+.containerindex h3{
+    font-family:'Protest Riot', sans-serif;
+}
+
+/* HEADER */
+.header{
+    grid-area: header;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+    background-color: #f4f10a;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.textoHeader{
+    margin: 0px 20px;
+}
+
+.textoHeader h1{
+    font-family: 'Kanit', sans-serif;
+    font-size: 3.2rem;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    grid-area: navbar;
+    background-color:#000000;
+    position: sticky;
+    top: 0;
+    padding: 0px;
+}
+
+.navbar-toggler{
+    background-color:#f4f10a;
+    margin: 10px; 
+}
+
+.nav-item a{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+.nav-item a:hover{
+    color:#000000;
+    background-color: #f4f10a;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.menu{
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logoMenu{
+    margin: 0 10px;
+}
+
+/* MAIN Productos */
+.main{
+    width: 100%;
+    padding: 10px;
+    grid-area: main;
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;  /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.productosInd{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: solid rgb(0, 0, 0) 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.imgProductosInd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+
+.productosInicio1{
+    margin: 5px;
+    width: 23rem;
+    height: 23rem;
+    background-image: url(../Fotos/Empanadas.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-color: #f4f10a;
+}
+
+.productosInicio1:hover{
+    border-color: #ffffff;
+}
+
+.productosInicio2{
+    margin: 5px;
+    width: 23rem;
+    height: 23rem;
+    background-image: url(../Fotos/Pizzas.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-color: #f4f10a;
+}
+
+.productosInicio2:hover{
+    border-color: #ffffff;
+}
+
+.productosInicio3{
+    margin: 5px;
+    width: 23rem;
+    height: 23rem;
+    background-image: url(../Fotos/ensaladas.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-color: #f4f10a;
+}
+
+.productosInicio3:hover{
+    border-color: #ffffff;
+}
+
+.productosInd h3{
+    color:#f4f10a;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    padding: 4px;
+    display: inline-block;
+}
+
+.productosInd h4{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+    background-color: #f4f10a;
+    padding: 5px;
+    display: inline-block;
+}
+
+/* SECTION  Con el sello de EME */
+.section{ 
+    grid-area: section;
+    background-image: url(../Fotos/Bondiolafondo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.destacadosInd{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.destacadosInd h3{
+    color: rgb(0, 0, 0);
+    background-color: #f4f10a;
+    font-size: 30px;
+    font-family:'Protest Riot', sans-serif;
+    padding: 5px 10px;
+    margin: 15px;
+}
+.destacadosInd a{
+    color:#f4f10a;
+    font-size: 20px;
+}
+
+.destacadosInd a p{
+    padding: 8px;
+}
+.destacadosInd a p:hover{
+    color: #f4f10a;
+    background-color: black;
+    border-radius: 10%;
+    display: inline-block;
+    padding: 8px;
+}
+
+/* FOOTER */
+.footer{ 
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+
+/* PRODUCTOS */
+
+.containerProductos{
+     padding: 5px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: grid;
+     grid-auto-columns: 1fr; 
+     grid-auto-rows: 1fr;
+     grid-template-columns: 1fr 1fr; 
+     grid-template-rows: 0.5fr 0.1fr 1.5fr 1.5fr 1.5fr 0.5fr; 
+     gap: 5px; 
+     grid-template-areas: 
+          "header header"
+          "navbar navbar"
+          "section1 aside1"
+          "section2 aside2"
+          "main main"
+          "footer footer";
+}
+
+.containerProductos h3{
+    font-family: 'Protest Riot', sans-serif;;
+}
+
+.containerProductos ul{
+    margin: 15px;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.3rem;
+    text-align: auto;
+    text-align: right;
+}
+
+.section1{
+    grid-area: section1;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizzas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.pizzas img{
+    width: 50vh;
+    border: solid white 2px;
+    max-width: 100%;
+}
+
+.pizzas img:hover {
+    filter: brightness(0.5);
+}
+
+.section2{
+    grid-area: section2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.masOpciones{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.masOpciones img{
+    width: 50vh;
+    border: solid white 2px;
+    max-width: 100%;
+}
+
+.masOpciones img:hover {
+    filter: brightness(0.5);
+}
+
+.aside1{
+    grid-area: aside1;
+    color:#000000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empanadas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.empanadas img{
+    width: 50vh;
+    border: solid white 2px;
+    max-width: 100%;
+}
+
+.empanadas img:hover {
+    filter: brightness(0.5);
+}
+
+.aside2{
+    grid-area: aside2;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.ensaladas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: right;
+}
+
+.ensaladasText{
+    text-align: right;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.ensaladas img{
+    width: 50vh;
+    border: solid white 2px;
+    max-width: 100%;
+}
+
+.ensaladas img:hover {
+    filter: brightness(0.5);
+}
+
+.mainVideo{
+    grid-area: main;
+    padding: 10px;
+    border: #7d7c7c dotted 4px;
+    border-radius: 10%;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c2c2ba' fill-opacity='0.46' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    color:#000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 780px){
+    .containerindex{
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.2fr 0.1fr 2fr 1fr 0.2fr; 
+        gap: 0.5rem;
+    }
+    .textoHeader{
+        text-align: center;
+    }
+
+    .containerProductos{
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "section1"
+        "aside1"
+        "aside2"
+        "section2"
+        "main"
+        "footer";
+    }
+
+    .ulProductos{
+        text-align: center;
+    }
+    .empanadas{
+        flex-direction: column;
+    }
+    .pizzas{
+        flex-direction: column;
+    }
+    .masOpciones{
+        flex-direction: column;
+    }
+    .containerProductos ul{
+        text-align: center;
+    }
+    .ensaladas{
+        flex-direction: column;
+    }
+    .ensaladasText{
+        text-align: center;
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    iframe{
+        max-width: 400px;
+    }
+    }

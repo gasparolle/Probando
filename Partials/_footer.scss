@@ -1,0 +1,15 @@
+/* FOOTER */
+.footer{ 
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0;
+    h3{
+        font-family: 'Protest Riot', sans-serif;
+    }
+}

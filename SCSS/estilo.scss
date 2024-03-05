@@ -1,0 +1,266 @@
+@import "../Partials/header";
+@import "../Partials/navbar";
+@import "../Partials/footer";
+@import "../Partials/variables";
+@import "../Partials/nosotros";
+@import "../Partials/productos";
+@import "../Partials/destacados";
+@import "../Partials/contacto";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $amarillo-eme;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* INDEX */
+
+.containerIndex{
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.5fr 0.1fr 1.5fr 1.5fr 0.5fr; 
+    gap: 5px; 
+    grid-template-areas: 
+         "header"
+         "navbar"
+         "main"
+         "section"
+         "footer";
+    h3{
+        font-family:$font-eme;
+    }    
+}
+
+/* MAIN Productos */
+main{
+    width: 100%;
+    padding: 10px;
+    grid-area: main;
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;  /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .productosInd{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px;
+        border: solid rgb(0, 0, 0) 10px;
+        text-align: center;
+        flex-wrap: wrap;
+
+        h3{
+            color:$amarillo-eme;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            padding: 4px;
+            display: inline-block;
+        }
+
+        h4{
+            text-decoration: none;
+            color: #000000;
+            font-size: 1.5rem;
+            background-color: $amarillo-eme;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5px;
+
+            a{
+                div{
+                    margin: 5px;
+                    width: 23rem;
+                    height: 23rem;
+                    background-position: center;
+                    background-size: cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid;
+                    border-color: $amarillo-eme;
+                    &:hover{
+                        border-color: #ffffff;
+                    }
+                }
+                .productosInicio1{
+                    background-image: url(../Fotos/Empanadas.jpg);
+                }
+                .productosInicio2{
+                    background-image: url(../Fotos/Pizzas.jpg);
+                }
+                .productosInicio3{
+                    background-image: url(../Fotos/ensaladas.jpg);
+                }
+            }
+        }
+    }   
+}
+
+/* SECTION  Con el sello de EME */
+.section{ 
+    grid-area: section;
+    background-image: url(../Fotos/Bondiolafondo.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+    div{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        flex-wrap: wrap;
+
+        h3{
+            color: rgb(0, 0, 0);
+            background-color: $amarillo-eme;
+            font-size: 30px;
+            font-family:$font-eme;
+            padding: 5px 10px;
+            margin: 15px;
+        }
+        a{
+            color:$amarillo-eme;
+            font-size: 20px;
+            p{
+              padding: 8px;
+                &:hover{
+                    color: $amarillo-eme;
+                    background-color: black;
+                    border-radius: 10%;
+                    display: inline-block;
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+/* MEDIA QUERIS */
+
+@media screen and (max-width: 780px){
+
+    
+    .containerIndex{
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.2fr 0.1fr 2fr 1fr 0.2fr; 
+        gap: 0.5rem;
+    }
+
+    p, h1, h2, h3, li{
+        text-align: center;
+    }
+
+    .containerProductos{
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.2fr;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "section1"
+        "aside1"
+        "aside2"
+        "section2"
+        "main"
+        "footer";
+
+        .section1{
+            .pizzas{
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .section2{
+            .masOpciones{
+                flex-direction: column;
+            }
+        }
+        .aside1{
+            .empanadas{
+                flex-direction: column;
+            }
+        }
+        .aside2{
+            .ensaladas{
+                flex-direction: column;
+            }
+        }
+        main{
+            iframe{
+                max-width: 400px;
+            }
+        }
+
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .containerNosotros{
+        main{
+            border: solid black 2px;
+        }
+        section{
+            img{
+                width: 400px;
+            }
+        }
+    }
+
+    .contacto{
+        grid-template-rows: 0.2fr 0.1fr 1fr 0.2fr;
+    }
+
+    .destacados{
+        main{
+            h3, h5{
+            text-align: center;
+            }
+        }
+        section{
+            h4{
+             text-align: center;
+            }
+        }
+        .section2, .section4{
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
